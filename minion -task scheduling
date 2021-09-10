@@ -1,0 +1,21 @@
+def primeList():
+    prime=""
+    for i in range(2,20250):
+        if(isPrime(i)):
+            prime=prime+str(i)
+    return prime
+
+def isPrime(n):
+    for i in range(2,int(n+1/2)):
+        if(n%i==0):
+            return False
+        else:
+            continue
+    return True
+
+def solution(n):
+    if(n>=0 and n<=10000):
+        primeids=primeList()
+        return primeids[n:n+5]
+    else:
+        return "0"
